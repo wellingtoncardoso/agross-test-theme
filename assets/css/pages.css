@@ -5,7 +5,7 @@
   padding: 1rem 0;
 }
 .sidebar-top .cpw-on{
-  display: flex;
+  display: block;
 }
 .sidebar-top .cpw-on li{
   padding: .1rem 0;
