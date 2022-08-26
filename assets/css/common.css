@@ -1,0 +1,23 @@
+.cpw-fixed-sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.cpw-padding-section{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.cpw-hide{
+  display: none !important;
+}
+
+.cpw-h2{
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+}

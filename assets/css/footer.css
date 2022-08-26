@@ -1,0 +1,21 @@
+footer{
+  padding: 4rem 0;
+  background-color: var(--color-medium-black);
+}
+footer .logo-footer{
+  width: 100%;
+  max-width: 280px;
+  display: block;
+}
+footer .nav-footer li{
+  display: block;
+  padding: .2rem 0;
+}
+footer .nav-footer li a{
+  color: var(--color-white);
+  font-size: 1rem;
+}
+footer .cpw-flex{
+  gap: 2rem;
+  justify-content: space-between;
+}
