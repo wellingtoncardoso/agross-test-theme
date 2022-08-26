@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
   // list slick the videos
   $('.list-videos').slick({
     centerMode: true,
-    centerPadding: '30px',
+    centerPadding: '40px',
     slidesToShow: 6,
     responsive: [
       {
@@ -43,7 +43,7 @@ jQuery(document).ready(function($){
           arrows: false,
           centerMode: true,
           centerPadding: '20px',
-          slidesToShow: 4
+          slidesToShow: 3
         }
       },
       {
@@ -51,7 +51,7 @@ jQuery(document).ready(function($){
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: '10px',
+          centerPadding: '30px',
           slidesToShow: 2
         }
       },

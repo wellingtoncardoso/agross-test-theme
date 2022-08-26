@@ -2,7 +2,7 @@
   
   var duration = document.getElementById("duration")
 
-  var data = '2022/08/26'
+  var data = '2022/08/27'
   var lack = ( new Date(data).getTime() - new Date().getTime() ) / 1000
   var sec = Math.round(lack % 60)
   var min = Math.round(lack / 60 % 60)
