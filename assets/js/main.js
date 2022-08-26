@@ -1,31 +1,70 @@
 jQuery(document).ready(function($){
-  
-  //action from bars and times navbar
-  $('.fa-bars').click(function(){
-    $(this).toggleClass('fa-times')    
-    $('nav').slideToggle()
-  })
-  $('nav').click(function(){
-    $('.fa-bars').removeClass('fa-times')
-    $(this).slideUp()
+   // fixed top nav add background whant the scroll in page
+   $(window).scroll(function(){
+    if($(window).scrollTop() > 250){
+      $("#section-01").addClass("cpw-fixed-sidebar")
+    }else{
+      $("#section-01").removeClass("cpw-fixed-sidebar")
+    }
   })
 
-  const sideMenu = document.querySelector("aside")
-  const menuBtn = document.querySelector("#menu-btn")
-  const closeBtn = document.querySelector("close-btn")
-  const themeToggler = document.querySelector(".theme-toggle")
-  
-  menuBtn.addEventListener('click', () => {
-    sideMenu.style.display = 'block'
+  //section anchor effect with internal link
+  $( '.nav-streaming li a[href^="#"]' ).on( 'click', function(e) {
+    e.preventDefault();
+    var id = $( this ).attr( 'href' ),
+        targetOffset = $( id ).offset().top
+     
+    $( 'html, body' ).animate({ 
+      scrollTop: targetOffset - 102
+    }, 300)
+  } )
+
+  //hide items menu
+  $(".item-off").click(function(){
+    $("#item-default").addClass("cpw-hide")
+    $("#item-on").addClass("cpw-hide")
+    $("#item-off").removeClass("cpw-hide")
   })
-  
-  closeBtn.addEventListener('click', () => {
-    sideMenu.style.display = 'none'  
+  $(".item-on").click(function(){
+    $("#item-default").addClass("cpw-hide")
+    $("#item-on").removeClass("cpw-hide")
+    $("#item-off").addClass("cpw-hide")
   })
-  
-  // change theme
-  themeToggler.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme-variables')
-    themeToggler.querySelector('span').classList.toggle('active')
-  })
+
+  // list slick the videos
+  $('.list-videos').slick({
+    centerMode: true,
+    centerPadding: '30px',
+    slidesToShow: 6,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '20px',
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '10px',
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
 });

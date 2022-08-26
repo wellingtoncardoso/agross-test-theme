@@ -1,0 +1,81 @@
+@media screen and (min-width: 768px){
+  .cpw-flex{
+    display: flex;
+    align-content: center;
+    gap: 5px;
+  }
+}
+.cpw-justify-center{
+  justify-content: center;
+}
+@media only screen and (max-width: 1024px){
+  .card__top,
+  .card__bottom,
+  .card__back::before,
+  .card__back::after{
+    height: 4.5rem !important;  
+  }
+  .card{
+    padding-bottom: 4.7rem !important;
+  }
+}
+@media only screen and (max-width: 768px){
+  .card__top,
+  .card__bottom,
+  .card__back::before,
+  .card__back::after{
+    height: 3rem !important;  
+  }
+  .card{
+    padding-bottom: 3.4rem !important;
+  }
+}
+@media only screen and (max-width: 767px){
+  .navbar .cpw-flex,
+  .sidebar-top .cpw-on{
+    display: flex;
+    gap: 15px;
+  }
+  .nav-streaming{
+    overflow-x: auto;
+  }
+  #section-02.bg-section-video{
+    min-height: auto;
+  }
+  #item-on{
+    display: flex;
+  }
+  #item-on div{
+    width: 100%;
+    max-width: 120px;
+  }
+  #item-on div + div{
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  #section-02 .bg-video svg{
+    top: 35%;
+    left: 40%;
+  }  
+
+  .nav-footer{
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+@media only screen and (max-width: 575px){
+  .sidebar-top h2{
+    font-size: 1.5rem;
+    margin-top: 1.4rem;
+  }
+  .section-01 h2{
+    font-size: 1.25rem;
+  }
+  #item-on div{
+    max-width: 80px;
+  }
+  #item-on div + div{
+    max-width: 120px;
+  }
+}
